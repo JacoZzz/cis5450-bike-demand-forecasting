@@ -1,0 +1,27 @@
+{
+  "source": {
+    "rows": 45771102,
+    "unique_ids": 45771102
+  },
+  "trips": {
+    "rows": 45771102,
+    "ambiguous_or_invalid_clock": 4829,
+    "over_24h": 9091,
+    "duration_eligible": 45757182,
+    "missing_start": 20271,
+    "missing_end": 130332
+  },
+  "excluded_clock_hours": {
+    "station_hours": 1460,
+    "departures": 4123,
+    "arrivals": 4537
+  },
+  "panel": {
+    "rows": 18996578,
+    "stations": 2428,
+    "inferred_zeros": 7022125,
+    "eligible_hours": 18981354,
+    "departures": 45746501,
+    "arrivals": 45636233
+  }
+}

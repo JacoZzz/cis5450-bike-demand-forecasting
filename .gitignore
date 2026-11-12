@@ -1,0 +1,13 @@
+# Downloaded archives and locally generated data. Keep the shared audit reports.
+/data/raw/
+/data/prepared/*
+!/data/prepared/audit.json
+/data/clean/*
+!/data/clean/audit.json
+
+# Local environment and editor files
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
