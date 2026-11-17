@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 os.chdir(Path(__file__).resolve().parents[1])
-out = Path("eda")
-out.mkdir(exist_ok=True)
+out = Path("results/eda")
+out.mkdir(exist_ok=True, parents=True)
 db = duckdb.connect()
 db.execute("""create view panel as select *,hour(hour_local) h,
     isodow(hour_local)<=5 weekday from 'data/clean/station_hour_clean.parquet'

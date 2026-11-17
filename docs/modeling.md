@@ -19,9 +19,9 @@ Compare a historical station-and-hour average baseline with Poisson regression, 
 
 Errors are in rides per station-hour; lower is better. Random forest reduced overall departure and arrival MAE by 14.99% and 14.53% relative to the baseline. During weekday peak hours (07, 08, 09, 16, 17, and 18), reductions were 20.88% and 20.64%. Peak-hour absolute errors remained higher than overall errors.
 
-![September departure prediction errors](../notebooks/results/september_test_departures.png)
+![September departure prediction errors](../results/demand/september_test_departures.png)
 
-![September arrival prediction errors](../notebooks/results/september_test_arrivals.png)
+![September arrival prediction errors](../results/demand/september_test_arrivals.png)
 
 Random forest (green) has the lowest MAE and RMSE for both outcomes, overall and during peak hours.
 
@@ -36,7 +36,7 @@ Net outflow is departures minus arrivals. Subtract the paired flow predictions w
 
 Net-outflow gains were smaller than gains for the individual flows. Departure and arrival prediction errors can cancel or reinforce when subtracted. These forecasts describe observed trip flows, not actual station inventory; empty or full stations cannot be determined without inventory and capacity information.
 
-![September net-outflow prediction errors](../notebooks/results/september_net_outflow_metrics.png)
+![September net-outflow prediction errors](../results/demand/september_net_outflow_metrics.png)
 
 The selected pair improves net-outflow errors relative to the historical baseline, but the improvement is smaller than for departures and arrivals separately.
 
@@ -62,10 +62,10 @@ Using the selected gradient boosting model, 3,696 of 9,415 casual test rides (39
 
 This is retrospective analysis because duration and endpoints are known only after a ride ends. Scores indicate similarity to observed member rides, not membership purchase probability. Results apply to the selected periods and populations; they do not establish year-round performance or individual rider behavior.
 
-![Time patterns of high-score casual rides](../notebooks/results/rider_type_classification/casual_time_patterns.png)
+![Time patterns of high-score casual rides](../results/rider_type/casual_time_patterns.png)
 
 The left panel shows sampled high-score counts by start hour; the right panel shows their share among casual rides by weekday and hour. Blank cells have fewer than 20 sampled casual rides. Weekday mornings show higher shares, while the largest counts occur in the late afternoon and early evening.
 
-![Start stations with high shares of member-like casual rides](../notebooks/results/rider_type_classification/casual_station_patterns.png)
+![Start stations with high shares of member-like casual rides](../results/rider_type/casual_station_patterns.png)
 
 These are the top 15 stations by high-score share among stations with at least 20 sampled casual rides. West End Ave & W 60 St leads with 13 of 20 rides (65%). Small denominators make the ranking sensitive to sampling; it is exploratory rather than a confirmed promotion priority.

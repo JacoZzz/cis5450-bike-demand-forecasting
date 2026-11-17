@@ -12,7 +12,7 @@ EDA figure C shows that 75.18% of casual rides and 69.22% of member rides used a
 - **Test:** a stratified permutation test with 1,000 permutations. Labels are reassigned only within each stratum, holding its ride and electric-bike counts fixed.
 - **Interval:** a 95% bootstrap interval that resamples whole days, because rides on the same day are not independent.
 
-![H1 permutation test](../hypothesis/H1_permutation.png)
+![H1 permutation test](../results/hypothesis/H1_permutation.png)
 
 | Measure | Result |
 | --- | ---: |
@@ -36,7 +36,7 @@ On weekdays many members commute while casual riders mostly ride for leisure. On
 - **Test:** a permutation test with 10,000 permutations. Weekday and weekend labels are shuffled only within the same month to hold seasonal changes fixed.
 - **Interval:** a 95% bootstrap interval that resamples days within each month × day-type cell.
 
-![H2 weekday and weekend gap](../hypothesis/H2_weekday_weekend.png)
+![H2 weekday and weekend gap](../results/hypothesis/H2_weekday_weekend.png)
 
 | Measure | Result |
 | --- | ---: |

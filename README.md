@@ -4,6 +4,54 @@ This CIS 5450 project forecasts the number of departures and arrivals at each st
 
 The repository includes the scripts, audit reports, EDA figures and their summary tables. To review the findings immediately after cloning, open the [EDA notes](docs/eda.md). To work with individual rides or station-hours, generate the local Parquet files using the commands below.
 
+## Project structure
+
+```text
+.
+├── README.md
+├── .gitignore
+├── scripts/                         # Reproducible data and EDA workflows
+│   ├── prepare_2025.py
+│   ├── clean_2025.py
+│   ├── eda_2025.py
+│   └── export_daily_counts.py
+├── notebooks/                       # Modeling and statistical analyses
+│   ├── station_hour_demand_modeling.ipynb
+│   ├── rider_type_classification.ipynb
+│   └── hypothesis_testing.ipynb
+├── data/
+│   ├── raw/                         # Downloaded ZIP archives (local)
+│   ├── prepared/                    # Typed source data and audit
+│   └── clean/                       # Cleaned data, daily exports and audit
+├── results/
+│   ├── eda/                         # EDA figures and summary CSVs
+│   ├── demand/                      # Forecast metrics, plots and local checkpoints
+│   ├── rider_type/                  # Classification summaries and plots
+│   └── hypothesis/                  # Hypothesis-test figures
+└── docs/
+    ├── proposal/                    # Original project proposal
+    ├── data-cleaning.md
+    ├── eda.md
+    ├── modeling.md
+    ├── hypothesis-testing.md
+    └── project-management.md
+```
+
+The two data audit JSON files are versioned. Raw archives, generated data, model checkpoints and row-level prediction exports are stored locally under the rules in `.gitignore`. Shared figures and small summary tables belong in `results/`.
+
+## Analysis guide
+
+| Task | Entry point | Explanation |
+| --- | --- | --- |
+| Cleaning | `scripts/prepare_2025.py`, then `scripts/clean_2025.py` | [Cleaning decisions](docs/data-cleaning.md) |
+| EDA | `scripts/eda_2025.py` | [Four figures and findings](docs/eda.md) |
+| Demand forecasting | [Demand notebook](notebooks/station_hour_demand_modeling.ipynb) | [Model results](docs/modeling.md) |
+| Rider classification | [Rider notebook](notebooks/rider_type_classification.ipynb) | [Model results](docs/modeling.md) |
+| Hypothesis tests | `scripts/export_daily_counts.py`, then [test notebook](notebooks/hypothesis_testing.ipynb) | [Methods and results](docs/hypothesis-testing.md) |
+| Timeline and responsibilities | [Project management](docs/project-management.md) | [Original proposal](docs/proposal/CIS_5450_Final_Project_Proposal.pdf) |
+
+EDA and hypothesis tests use January–July. The existing modeling notebooks use April–July training, August validation and September testing, followed by an April–August refit. These are the periods used for the saved results.
+
 ## Which file should I use?
 
 | File | Unit | Use |
@@ -59,3 +107,17 @@ python scripts/eda_2025.py
 ```
 
 See the [January–July EDA and check-in notes](docs/eda.md) for the four figures, denominators and findings.
+
+## Run the modeling and hypothesis notebooks
+
+After data cleaning, install the analysis dependencies in the same environment and export the daily counts.
+
+```sh
+python -m pip install numpy pandas matplotlib scikit-learn joblib pyarrow jupyterlab
+python scripts/export_daily_counts.py
+jupyter lab
+```
+
+Open a notebook under `notebooks/` and run its cells in order. Paths resolve from the project root or a directory inside it. Forecasting and classification can be run independently. The hypothesis notebook requires the daily exports.
+
+Small result tables and figures are versioned in `results/`. Model checkpoints and row-level prediction exports are generated locally. Saved notebook outputs document the previous runs. The directory reorganization updated paths without rerunning model fitting or statistical tests.

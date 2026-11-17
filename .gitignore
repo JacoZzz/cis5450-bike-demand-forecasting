@@ -12,3 +12,8 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 notebooks/results/final_models_and_predictions.joblib
+
+# Large regenerated model artifacts and row-level predictions
+/results/**/*.joblib
+/results/**/*.parquet
+/results/rider_type/casual_ride_scores.csv
