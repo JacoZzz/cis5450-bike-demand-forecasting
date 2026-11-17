@@ -1,0 +1,17 @@
+model,target,period,n,MAE,RMSE,selected_on_August
+Historical average,departures,All hours,1548059,1.6802956162030787,3.459089694683203,False
+Historical average,departures,Peak hours,284323,2.7192176334537876,5.301757780201074,False
+Historical average,arrivals,All hours,1548059,1.7008286495241065,3.5132289130688354,False
+Historical average,arrivals,Peak hours,284323,2.7051513003811194,5.376120307008891,False
+Poisson,departures,All hours,1548059,1.5830402972232156,2.990554674295034,False
+Poisson,departures,Peak hours,284323,2.3905355602932006,4.39171443842301,False
+Random forest,departures,All hours,1548059,1.428456194033997,2.6355369651201372,True
+Random forest,departures,Peak hours,284323,2.1515484160680134,3.8494832081931247,True
+Gradient boosting,departures,All hours,1548059,1.5080569665546457,2.7670332979533034,False
+Gradient boosting,departures,Peak hours,284323,2.293901547643519,4.106856143574232,False
+Poisson,arrivals,All hours,1548059,1.6037988363433908,3.047423794295224,False
+Poisson,arrivals,Peak hours,284323,2.3834307360952827,4.484178288363523,False
+Random forest,arrivals,All hours,1548059,1.453764551924613,2.6764032970959613,True
+Random forest,arrivals,Peak hours,284323,2.146745218904594,3.9010031141854604,True
+Gradient boosting,arrivals,All hours,1548059,1.5285771825535275,2.808121493140528,False
+Gradient boosting,arrivals,Peak hours,284323,2.2726705022249982,4.144200115725156,False
