@@ -1,15 +1,33 @@
 # Project Management
 
-We have completed the 2025 Citi Bike data cleaning pipeline, four EDA figures,
-station-level demand forecasting, rider-type classification, and two hypothesis
-tests. The proposed schedule below covers the remaining work and final deliverables.
+## Current Progress and Responsibilities
+
+We adjusted our roles as the project developed. We already have
+the cleaning pipeline, four EDA figures, results for both modeling
+tasks, and results for two hypothesis tests.
+
+| Team member | Work completed so far |
+| --- | --- |
+| Jacob Zhu | Data preparation, cleaning, EDA, and repository organization |
+| Zhihao Huang | Station-level demand forecasting and rider-type classification |
+| Qing Deng | Two hypothesis tests on electric-bike use |
+| Zeyin Feng | Project management plan, remaining tasks, and completion timeline |
+
+## Remaining Work and Proposed Timeline
+
+The remaining work focuses on reviewing the existing analyses,
+checking the proposed extensions, and preparing the final deliverables.
 
 | Target date | Owner | Remaining work |
 | --- | --- | --- |
-| Nov. 23 | Qing Deng and Jacob Zhu | Check NOAA weather and federal holiday data. Decide which features can be used at forecast time and document the decision. |
-| Nov. 27 | Qing Deng and Zhihao Huang | Finalize the data preparation and EDA sections, including the cleaning assumptions and how the figures informed modeling. |
-| Nov. 30 | Jacob Zhu | Finalize the forecasting comparison, including the baseline, model tuning, overall and peak-hour test metrics, and implications for rebalancing. |
-| Nov. 30 | Zeyin Feng | Finalize the rider-type classification and both hypothesis tests. Explain class-specific performance, confidence intervals, and limitations. |
-| Dec. 3 | Zeyin Feng coordinates with all section owners | Assemble one Annotated Notebook and complete the Difficulty Concept Location Notebook. |
+| Nov. 23 | Jacob Zhu and Zhihao Huang | Review weather and holiday data availability and decide whether to include these features in the final forecasting analysis. |
+| Nov. 30 | Jacob Zhu | Review the cleaning and EDA sections. Check that the assumptions, figure explanations, and conclusions are clear. |
+| Nov. 30 | Zhihao Huang | Review the forecasting and classification sections. Check model comparisons, evaluation metrics, and limitations. |
+| Nov. 30 | Qing Deng | Review the two hypothesis tests. Check the methods, effect sizes, confidence intervals, and limitations. |
+| Dec. 3 | Zeyin Feng coordinates; all members contribute | Combine the code and explanations into one Annotated Notebook. Complete the Difficulty Concept Location Notebook. |
 | Dec. 5 | All team members | Rehearse and record the 8–10 minute presentation and export the slides as a PDF. |
-| Dec. 6–7 | All team members review; one designated member submits | Restart and run all notebook cells, save visible outputs, and verify all deliverables. Submit by Dec. 7 at 11:59 p.m. EST and confirm all teammates are included on Gradescope. |
+| Dec. 6 | All team members | Restart and run the final notebook from beginning to end. Save visible outputs and check that the notebook and presentation agree. |
+| Dec. 7 | One designated submitter, with team review | Submit all final deliverables by 11:59 p.m. EST and confirm that all teammates are included on Gradescope. |
+
+The remaining responsibilities and internal deadlines above are
+proposed arrangements for team confirmation.
